@@ -29,7 +29,7 @@ class InfoController extends Controller
     $decisions=Decision::where('wilaya_id',$wilaya->id)->get();
     foreach ($decisions as $decision){
 
-        $decision->user=User::where('user_id',$decision->user_id)->first();
+        $decision->user=User::where('id',$decision->user_id)->first();
 
     }
 
